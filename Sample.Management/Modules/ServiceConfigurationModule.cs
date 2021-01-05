@@ -6,13 +6,13 @@ using Sample.Management.Modules;
 using Sample.Shared.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: RegisterModule(typeof(LearningManagementServiceModule))]
+[assembly: RegisterModule(typeof(ServiceConfigurationModule))]
 
 namespace Sample.Management.Modules
 {
-    public class LearningManagementServiceModule : Module
+    public class ServiceConfigurationModule : Module
     {
-        public LearningManagementServiceModule() : base(nameof(LearningManagementServiceModule))
+        public ServiceConfigurationModule() : base(nameof(Sample) + "." + nameof(ServiceConfigurationModule))
         {
         }
 
