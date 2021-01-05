@@ -7,6 +7,12 @@ namespace Sample.Shared.Configuration
 {
     public static class AzureSearchtStartupExtensions
     {
+        /// <summary>
+        /// Register dependencies required for the AzureSearchFeedService. 
+        /// This can be used by both the .NET Core web app and the CMS app.
+        /// </summary>
+        /// <param name="services"></param>
+        /// <returns></returns>
         public static IServiceCollection AddAzureSearchServices(this IServiceCollection services)
         {
             services.AddSingleton<IPageRepository, PageRepository>();
