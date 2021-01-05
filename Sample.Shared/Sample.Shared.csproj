@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>Sample.Shared</AssemblyName>
+    <RootNamespace>Sample.Shared</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Kentico.Xperience.Libraries" Version="13.0.0" />
+  </ItemGroup>
+</Project>
