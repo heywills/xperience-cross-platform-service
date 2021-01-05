@@ -23,6 +23,7 @@ namespace Sample.Management.Modules
             {
                 IServiceCollection additionalServices = new ServiceCollection();
                 additionalServices.AddLearningManagementServices()
+                                  .AddAzureSearchServices()
                                   .RegisterWithKenticoServiceLocator();
             }
         }
