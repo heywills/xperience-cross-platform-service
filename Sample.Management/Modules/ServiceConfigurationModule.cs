@@ -12,7 +12,8 @@ namespace Sample.Management.Modules
 {
     public class ServiceConfigurationModule : Module
     {
-        public ServiceConfigurationModule() : base(nameof(Sample) + "." + nameof(ServiceConfigurationModule))
+        public ServiceConfigurationModule() 
+            : base(nameof(Sample) + "." + nameof(ServiceConfigurationModule))
         {
         }
 
@@ -25,11 +26,11 @@ namespace Sample.Management.Modules
         protected override void OnPreInit()
         {
             base.OnPreInit();
-            if(SystemContext.IsCMSRunningAsMainApplication)
+            if (SystemContext.IsCMSRunningAsMainApplication)
             {
                 // Create an empty service collection, so that we can call the same
                 // extension methods used when registering the shared dependencies in
-                // .NET Core web applicaiton setup.
+                // .NET Core web application setup.
                 IServiceCollection additionalServices = new ServiceCollection();
                 // Call all extension methods required to setup dependencies.
                 additionalServices.AddLearningManagementServices()
